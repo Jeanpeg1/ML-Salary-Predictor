@@ -1,0 +1,12 @@
+# Core libraries
+scikit-learn
+xgboost
+pandas
+numpy
+matplotlib
+shap
+joblib
+
+
+# User Interface
+streamlit
