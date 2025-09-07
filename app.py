@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd
 import joblib
 
+#Panggil dataset hasil train
 model = joblib.load("salary_predictor.pkl")
 
+#Tentukan judul dan pesan
 st.title("Salary Prediction App")
 st.write("Masukkan data kandidat untuk memprediksi gaji menggunakan model XGBoost.")
 
@@ -26,19 +28,3 @@ if st.button("Prediksi Gaji"):
     prediction = model.predict(input_df)[0]
     st.success(f"Prediksi Gaji: Rp {prediction:,.0f}")
 
-
-# city = st.selectbox("Kota", ["Jakarta", "Bandung", "Surabaya", "Medan"])
-# education = st.selectbox("Pendidikan", ["SMA", "Diploma", "Sarjana", "Magister", "Doktor"])
-# experience = st.number_input("Lama pengalaman (tahun)", min_value=0, max_value=40, value=3)
-# age = st.number_input("Usia Karyawan (tahun)", min_value=18, max_value=60, value=25)
-
-# data = pd.DataFrame({
-#     "City": [city],
-#     "Education": [education],
-#     "Experience": [experience],
-#     "Age": [age]
-# })
-
-# if st.button("Prediksi Gaji"):
-#     prediction = model.predict(data)
-#     st.success(f"Prediksi Gaji: Rp {prediction[0]:,.2f}")
