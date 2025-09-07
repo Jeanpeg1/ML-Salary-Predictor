@@ -205,3 +205,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+#=== Custom Ignore for Data Science ===
+#Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Data folder (Synthetic can be revealed, real data SHOULD IGNORE)
+data/*
+!data/salary_data.csv # Synthetic data
